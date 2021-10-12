@@ -1,3 +1,5 @@
+import Component from "./Component";
+
 class Character extends Component {
   character;
 
