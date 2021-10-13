@@ -11,6 +11,7 @@ class Page {
     this.createMainDiv();
     this.createList();
     this.createCommunicationsDiv();
+    this.printPersonaje();
   }
 
   createMainDiv() {
@@ -29,6 +30,12 @@ class Page {
     this.communicationsDiv = document.createElement("div");
     this.communicationsDiv.className = "comunications";
     document.body.append(this.communicationsDiv);
+  }
+
+  printPersonaje() {
+    this.personajes.map((personaje) => {
+      new Component(personaje, this.lista);
+    });
   }
 }
 
